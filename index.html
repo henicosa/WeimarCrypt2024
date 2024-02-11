@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeimarCrypt Conference</title>
     <style>
+        :root {
+            --conference-hue: 40;
+            --conference-color: hsl(var(--conference-hue),70%,30%);
+            --cc-1: hsl(calc(var(--conference-hue) + 150),70%,40%);
+            --cc-2: hsl(calc(var(--conference-hue) + 15),70%,60%);
+            --cc-3: hsl(calc(var(--conference-hue) - 15),70%,20%);
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -12,6 +19,9 @@
         header {
             text-align: center;
             margin-bottom: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--conference-color);
         }
         nav {
             display: flex;
@@ -73,6 +83,11 @@
     }
 }
 
+.table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
 @media (min-width: 800px) {
     body {
         width: 800px;
@@ -83,7 +98,7 @@
 
 .time {
     font-weight: bold;
-    color: #007bff;
+    color: var(--cc-1);
 }
 
 .title {
@@ -91,6 +106,14 @@
     font-weight: bold;
     margin-bottom: 5px;
     color: #333;
+}
+.firstpage p::first-letter {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 3em;
+  padding-right: 0.2em;
+  float: left;
+  color: var(--cc-1);
+  background-color: #eff8fd;
 }
     </style>
 </head>
@@ -110,9 +133,23 @@
         <a href="#data-protection">Data Protection</a>
     </nav>
 
-    <img src="image2.PNG" style="width: 100%; padding-top: 1em;">
+    <div style="background: url('image2.PNG') center center;
+	background-size: cover;
+	margin-bottom:0;
+    margin-top: 1em;
+    padding-top: 4em; 
+    padding-bottom: 6em;
+    box-sizing: border-box;
+	">
+    <h2 style="text-align:center; color:#eff8fd;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black">
+        1<sup>st</sup> International Conference WeimarCrypt-2024 on</h2>
+        <h1 style="text-align:center; color:var(--cc-2);text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black"> Symmetric Cryptography</h1>
+        <h2 style="text-align:center;color:#eff8fd;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black">	Faculty of Medieninformatik, Bauhaus-Universität Weimar</h2>
+        <h2 style="text-align:center;color:#eff8fd;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black"> February 28, 2024 </h2>
+    </div>
 
-    <section id="introduction">
+
+    <section id="introduction" class="firstpage">
         <h2>Welcome to WeimarCrypt Conference</h2>
         <p>Join us for an exciting exploration of the latest developments in symmetric cryptography and security. The conference brings together experts from around the world to share their insights and research. Don't miss this opportunity to connect with leading minds in the field.</p>
     </section>
@@ -217,7 +254,38 @@
         </div>
     </section>
     
-    
+    <section id="important-dates">
+        <h2>Important Dates</h2>
+        <div class="table-responsive">
+            <table class="texte" style="width:1%;white-space:nowrap">
+                <tbody><tr>
+        <td style="border:none">Submission deadline</td>
+        <td style="border:none;  ">
+        <span style="text-decoration:line-through;">October 30, 2022</span>
+        <span style="color:red; font-weight:bold">November 15, 2023,  </span>
+        </td>
+                </tr>
+                <tr>
+                    <td style="border:none">Notification to authors &nbsp; </td>
+                <td style="border:none">
+                    <strike>November 20, 2023</strike>
+                    December 24, 2023
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border:none">Registration &nbsp; &nbsp;</td>
+                    <td style="border:none">February 27, 2024</td>
+                </tr>
+                <tr>
+                    <td style="border:none">Conference:</td>
+                    <td style="border:none">February 28, 2024</td>
+                </tr>
+
+            </tbody></table>
+        </div>
+        
+        <!-- Add relevant information here -->
+    </section>
 
     <section id="important-info">
         <h2>Important Information</h2>
@@ -228,11 +296,13 @@
     <section id="impressum">
         <h2>Impressum</h2>
         <!-- Add impressum details here -->
+        https://www.uni-weimar.de/index.php?id=776
     </section>
 
     <section id="data-protection">
         <h2>Data Protection</h2>
         <!-- Add data protection details here -->
+        We, as a part of the cryptography research community, value your privacy. Therefore, we will not collect any personal information.
     </section>
 
     <footer>
