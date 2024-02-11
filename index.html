@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeimarCrypt Conference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: space-around;
+            background-color: #eee;
+            padding: 10px;
+        }
+        nav a {
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .event {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    .event {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .time {
+        flex: 0 0 120px;
+        width: 80px;
+        margin-right: 20px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .description {
+        color: #666;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+    
+    nav a {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.time {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>WeimarCrypt Conference</h1>
+        <p>February 11, 2024</p>
+    </header>
+
+    
+
+    <nav>
+        <a href="#schedule">Schedule</a>
+        <a href="#important-info">Important Info</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#data-protection">Data Protection</a>
+    </nav>
+
+    <img src="image2.PNG" style="width: 100%; padding-top: 1em;">
+
+    <section id="introduction">
+        <h2>Welcome to WeimarCrypt Conference</h2>
+        <p>Join us for an exciting exploration of the latest developments in symmetric cryptography and security. The conference brings together experts from around the world to share their insights and research. Don't miss this opportunity to connect with leading minds in the field.</p>
+    </section>
+
+    <section id="schedule">
+        <h2>Conference Schedule</h2>
+    
+        <div class="event">
+            <p class="time">13:30 - 13:45</p>
+            <p class="title">Begrüßung</p>
+        </div>
+    
+        <div class="event">
+            <p class="time">13:45 - 14:45</p>
+            <div class="event-info">
+                <p class="title">Keynote (Stefan)</p>
+                <p class="description">Abstract: t.b.a.</p>
+            </div>
+        </div>
+    
+        <div class="event">
+            <p class="time">14:45 - 15:00</p>
+            <p class="title">Kaffeepause</p>
+        </div>
+    
+        <div class="event">
+            <p class="time">15:00 - 15:30</p>
+            <div class="event-info">
+                <p class="title">Let's Go Eevee! A Friendly and Suitable Family of AEAD Modes for IoT-to-Cloud Secure Computation (Ludwig Lorenz)</p>
+                <p class="description">We propose a new, provably secure family of lightweight modes for authenticated encryption with associated data (AEAD), called Eevee. The Eevee family has fully parallel decryption, making it suitable for MPC protocols for which the round complexity depends on the complexity of the function they compute. Further, our modes use the lightweight forkcipher primitive that offers fixed-length output expansion and a compact yet parallelizable internal structure.</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <p class="time">15:30 - 16:00</p>
+            <div class="event-info">
+                <p class="title">Generic Security of the Ascon Mode: On the Power of Key Blinding (Florian Timm)</p>
+                <p class="description">The Ascon authenticated encryption scheme has recently been selected as winner of the NIST Lightweight Cryptography competition. Despite its fame, however, there is no known overall generic security treatment of its mode: most importantly, all earlier related generic security results only use the key to initialize the state and do not take into account key blinding internally and at the end. In this work we present a thorough security analysis of the Ascon mode: we consider multi-user and possibly nonce-misuse security by default, but more importantly, we particularly investigate the role of the key blinding. More technically, our analysis includes an authenticity study in various attack settings. This analysis includes a description of a security model of authenticity under state recovery, that captures the idea that the mode aims to still guarantee authenticity and security against key recovery even if an inner state is revealed to the adversary in some way, for instance through leakage. We prove that Ascon satisfies this security property, thanks to its unique key blinding technique.</p>
+            </div>
+        </div>
+    
+        <div class="event">
+            <p class="time">16:00 - 17:00</p>
+            <div class="event-info">
+                <p class="title">Rump Session</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <p class="time">17:00 - 17:30</p>
+            <div class="event-info">
+                <p class="title">Security of the Ascon Authenticated Encryption Mode in the Presence of Quantum Adversaries (Nathalie Lang)</p>
+                <p class="description">We examine the post-quantum security of the Ascon authen-
+                    ticated encryption mode. Ascon has gained recognition as the winner
+                    in the lightweight category in both the CAESAR and NIST competitions.
+                    Despite its classical security analyses, the potential impact of
+                    quantum adversaries on Ascon has not yet been explored comprehensively.
+                    We present a thorough investigation of Ascon’s security in the
+                    setting where the adversary has classical access to the construction but
+                    has the possession over a quantum computer and can use it to improve
+                    its attack. Utilizing the semi-classical one-way to hiding (O2H) lemma,
+                    and by smartly defining a corresponding puncture set tailored to the
+                    Ascon mode design, we establish that Ascon achieves security up to ap-
+                    proximately \(\min \{2^{c/3} , 2^{k/2} \}\) evaluations, where c is the capacity and k
+                    is the key size. Additionally, we discuss the implication of our results for
+                    the different variants of Ascon, and compare our results to generic quan-
+                    tum attacks against Ascon, including exhaustive key search and state
+                    recovery.
+                </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <p class="time">17:30 - 18:00</p>
+            <div class="event-info">
+                <p class="title">QCB is blindly unforgeable (Jannis Leuther)</p>
+                <p class="description">QCB is a proposal for a post-quantum secure, rate-one authenticated
+                    encryption with associated data scheme (AEAD) based on
+                    classical OCB3 and ΘCB, which are vulnerable against a quantum adversary
+                    in the Q2 setting. The authors of QCB prove integrity under
+                    plus-one unforgeability, whereas the proof of the stronger definition of
+                    blind unforgeability has been left as an open problem. After a short
+                    overview of QCB and the current state of security definitions for authentication,
+                    this work proves blind unforgeability of QCB. Finally, the
+                    strategy of using tweakable block ciphers in authenticated encryption is
+                    generalised to a generic blindly unforgeable AEAD model</p>
+            </div>
+        </div>
+
+
+        <div class="event">
+            <p class="time">18:00 - 18:30</p>
+            <div class="event-info">
+                <p class="title">Post-Quantum Security of OTR (?) (Sebastian Reichmann)</p>
+                <p class="description">Due to the rise of quantum computers and their possibilities of attacks a look was taken into the Authenticated Encryption Associated Data (AEAD) mode Off-Set Two-Round (OTR). By using Simon's algorithm a potential collision forgery attack can be constructed which breaks this authenticated encryption scheme in a post-quantum scenario. Only doubling the key size seems to be insufficient to keep the security of OTR. In this paper, we took a look into classical OTR and different kinds of attacks, proposed a modified version with the usage of tweakable block ciphers to ensure a quantum-secure authenticated encryption mode and proved its post-quantum security.</p>
+            </div>
+        </div>
+    
+        <div class="event">
+            <p class="time">19:00 - ?</p>
+            <p class="title">Conference Dinner (La Trattoria im Eckermannhaus, Brauhausgasse 13, 99423 Weimar)</p>
+        </div>
+    </section>
+    
+    
+
+    <section id="important-info">
+        <h2>Important Information</h2>
+        <p>Make sure to check this section for important updates and announcements during the conference.</p>
+        <!-- Add relevant information here -->
+    </section>
+
+    <section id="impressum">
+        <h2>Impressum</h2>
+        <!-- Add impressum details here -->
+    </section>
+
+    <section id="data-protection">
+        <h2>Data Protection</h2>
+        <!-- Add data protection details here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WeimarCrypt Conference</p>
+    </footer>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
